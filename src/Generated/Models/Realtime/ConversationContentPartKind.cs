@@ -17,6 +17,7 @@ namespace OpenAI.Realtime
         private const string InputAudioValue = "input_audio";
         private const string OutputTextValue = "output_text";
         private const string OutputAudioValue = "output_audio";
+        private const string InputImageValue = "input_image";
 
         public ConversationContentPartKind(string value)
         {
@@ -25,6 +26,7 @@ namespace OpenAI.Realtime
             _value = value;
         }
 
+        public static ConversationContentPartKind InputImage { get; } = new ConversationContentPartKind(InputImageValue);
         public static ConversationContentPartKind InputText { get; } = new ConversationContentPartKind(InputTextValue);
 
         public static ConversationContentPartKind InputAudio { get; } = new ConversationContentPartKind(InputAudioValue);
